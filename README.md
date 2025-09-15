@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+![ScreenRecording2025-09-15at7 43 27PM-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/fe79932c-f34c-4e54-9539-a065d8c56144)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## 🛠️ Установка и запуск
 
-In the project directory, you can run:
+```bash
+npm install
+npm start
+```
 
-### `npm start`
+# 🛒 Basket App
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Описание проекта
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Корзина заказов на React + Redux. Позволяет добавлять товары, создавать заказы с выбором товара, указывать имя, возраст и статус заказа ("Доставлен" или "Не доставлен"). Все заказы отображаются в списке.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📁 Структура проекта
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## ⚙️ Реализация корзины
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **ProductForm.js** — форма для добавления новых товаров.
+- **OrderForm.js** — форма для создания заказа: имя, возраст, выбор товара из выпадающего списка, статус заказа.
+- **OrderList.js** — отображение всех заказов в виде списка.
+- **Basket.js** — главная страница корзины, объединяет все компоненты и логику.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🔄 Redux
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **actionTypes.js** — константы типов действий для товаров и заказов.
+- **actions.js** — функции для создания действий (action creators).
+- **productReducer.js** — редьюсер для управления списком товаров.
+- **orderReducer.js** — редьюсер для управления списком заказов.
+- **store.js** — объединяет редьюсеры и создает Redux Store.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+📋 Как работает корзина
+Добавьте товары через форму.
+Создайте заказ, выбрав товар из выпадающего списка, указав имя, возраст и статус.
+Заказ появится в списке заказов.
+Все данные хранятся в Redux Store.
